@@ -127,7 +127,7 @@ func (k *Kubernetes) k8sKubeletRole() *pkiRole {
 			"use_csr_sans":        false,
 			"enforce_hostnames":   false,
 			"organization":        "system:nodes",
-			"allowed_domains":     strings.Join([]string{"kubelet", "system:node", "system:node:*", "system:node:*.eu-west-2.compute.internal", "*eu-west-2.compute.internal"}, ","),
+			"allowed_domains":     strings.Join([]string{"kubelet", "system:node", "system:node:*", "system:node:*.compute.internal", "*.compute.internal"}, ","),
 			"allow_bare_domains":  true,
 			"allow_glob_domains":  true,
 			"allow_any_name":      true,
